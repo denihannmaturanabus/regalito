@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Heart, Camera, X, ZoomIn } from 'lucide-react';
+import { ChevronDown, Heart, X, ZoomIn, Camera } from 'lucide-react';
 import Countdown from './Countdown';
 import Letter from './Letter';
 
@@ -12,11 +12,11 @@ const MainExperience: React.FC = () => {
   // format: 'JPG' (mayúscula) o 'png' (minúscula) según tus carpetas reales.
   const timelineData = [
     { year: 2020, format: "JPG", comment: "Donde nuestra historia comenzó entre mensajes..." },
-    { year: 2021, format: "png", comment: "Las primeras videollamadas interminables." }, 
-    { year: 2022, format: "png", comment: "El año que entendimos que esto era para siempre." }, // Asumí JPG, si no sale cámbialo a 'png' o 'jpg'
-    { year: 2023, format: "png", comment: "Contando los días para vernos otra vez." },       // Asumí JPG
-    { year: 2024, format: "JPG", comment: "Planeando cada detalle de nuestro futuro." },      // Asumí JPG
-    { year: 2025, format: "JPG", comment: "El último año de extrañarnos. La meta está cerca." } // Asumí JPG
+    { year: 2021, format: "png", comment: "Las primeras videollamadas interminables." },
+    { year: 2022, format: "png", comment: "El año que entendimos que esto era para siempre." },
+    { year: 2023, format: "png", comment: "Contando los días para vernos otra vez." },
+    { year: 2024, format: "png", comment: "Planeando cada detalle de nuestro futuro." },
+    { year: 2025, format: "png", comment: "El último año de extrañarnos. La meta está cerca." }
   ];
 
   return (
@@ -98,6 +98,9 @@ const MainExperience: React.FC = () => {
         </motion.div>
       </section>
 
+      {/* SECCIÓN CARTA */}
+      <Letter />
+
       {/* SECCIÓN TIMELINE CON COMENTARIOS Y ZOOM */}
       <section className="py-24 px-4 bg-white relative">
         <div className="max-w-4xl mx-auto">
@@ -105,7 +108,7 @@ const MainExperience: React.FC = () => {
                 <h2 className="text-rose-400 font-bold tracking-[0.3em] text-xs uppercase mb-4">Para celebrar este San Valentin</h2>
                 <h2 className="text-rose-400 font-bold tracking-[0.3em] text-xs uppercase mb-4">Te hice una recopilacion de</h2>
                 <h3 className="text-4xl font-extrabold text-rose-900">Nuestra Historia</h3>
-                <p className="text-rose-400 font-medium">Capítulos de un amor sin límites</p>
+                <p className="text-rose-400 font-medium">teamoteamoteamo</p>
             </div>
 
             <div className="space-y-12">
@@ -134,7 +137,6 @@ const MainExperience: React.FC = () => {
                                 <div 
                                   key={photoNum} 
                                   className="relative group overflow-hidden rounded-xl bg-rose-200 cursor-pointer aspect-square shadow-sm"
-                                  // USA LA EXTENSIÓN CORRECTA DINÁMICAMENTE
                                   onClick={() => setSelectedImage(`/img/${item.year}/${photoNum}.${item.format}`)}
                                 >
                                     <img 
@@ -143,7 +145,6 @@ const MainExperience: React.FC = () => {
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         loading="lazy"
                                     />
-                                    {/* Overlay con icono de Lupa al hover */}
                                     <div className="absolute inset-0 bg-rose-900/0 group-hover:bg-rose-900/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                                       <ZoomIn className="text-white drop-shadow-md" size={24} />
                                     </div>
@@ -152,12 +153,36 @@ const MainExperience: React.FC = () => {
                         </div>
                     </motion.div>
                 ))}
+
+                {/* --- AÑO 2026: PRÓXIMAMENTE (SIN FOTOS) --- */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="flex flex-col md:flex-row gap-8 bg-gradient-to-r from-rose-100 to-pink-50 p-6 md:p-8 rounded-3xl border border-rose-200/50 shadow-inner"
+                >
+                     <div className="md:w-48 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-rose-300 pb-6 md:pb-0 md:pr-8 shrink-0">
+                        <span className="text-6xl font-black text-rose-400/80 tracking-tighter">2026</span>
+                        <span className="text-xs font-bold text-rose-500 uppercase tracking-widest mt-1 mb-3">El Futuro</span>
+                        <p className="text-sm font-medium text-rose-800 italic text-center md:text-left leading-relaxed">
+                          "Aquí estaran nuestras proximas aventuras."
+                        </p>
+                    </div>
+
+                    <div className="flex-1 flex flex-col items-center justify-center h-48 md:h-auto bg-white/40 rounded-2xl border-2 border-dashed border-rose-300 gap-4 text-center p-6">
+                        <div className="bg-rose-100 p-4 rounded-full">
+                           <Camera size={32} className="text-rose-400" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-rose-800 text-lg">Próximamente...</p>
+                          <p className="text-rose-500 text-sm">Vuelve pronto para ver nuevas fotitos.</p>
+                        </div>
+                    </div>
+                </motion.div>
+
             </div>
         </div>
       </section>
-
-      {/* SECCIÓN CARTA (Sin fondo extra porque Letter ya tiene el suyo) */}
-      <Letter />
 
       {/* SECCIÓN FINAL: CUENTA REGRESIVA */}
       <section className="py-32 px-6 bg-gradient-to-b from-white to-rose-100 relative overflow-hidden">
@@ -179,7 +204,7 @@ const MainExperience: React.FC = () => {
                 >
                   <h2 className="text-3xl font-bold text-rose-900 mb-2">Te amo infinitamente</h2>
                   <p className="text-sm text-rose-500 font-medium tracking-wide">
-                    Hecho con todo mi ❤️ para nuestro 14 de Febrero.
+                    Hecho con todo mi ❤️ para ti.
                   </p>
                 </motion.div>
             </div>

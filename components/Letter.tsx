@@ -10,12 +10,11 @@ const Letter = () => {
   // =====================================================================
   const fullText = `Hola mi vida,
 
-Si estás leyendo esto, es porque falta muy poco para que la distancia deje de ser nuestro enemigo.
+a
 
-Han sido 5 años soñando con este momento. Gracias por cada videollamada, por cada mensaje de "buenos días" y por no rendirte nunca.
+a
 
-Eres mi persona favorita en el mundo. Chile y Argentina por fin se unen en nuestra casa.
-
+a
 Te amo infinito.`;
   // 👆👆👆 FIN DE LA CARTA
   // =====================================================================
