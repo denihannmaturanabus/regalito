@@ -59,7 +59,7 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
             <Heart size={48} className="text-rose-600 fill-rose-500 mx-auto" />
           </motion.div>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-rose-900">
-            Nuestra Historia
+            Feliz San Valentín, mi amor
           </h1>
           <p className="text-rose-800/70 font-medium">
             5 años juntitos y para toda la vida.
