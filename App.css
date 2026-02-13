@@ -1,0 +1,10 @@
+
+/* No separate CSS files as per instructions, using Tailwind classes primarily. */
+/* Custom scrollbar hiding for the gallery */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
