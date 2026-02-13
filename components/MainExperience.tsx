@@ -11,12 +11,12 @@ const MainExperience: React.FC = () => {
   // DATOS DEL TIMELINE: CONFIGURACIÓN DE AÑOS Y FORMATOS
   // format: 'JPG' (mayúscula) o 'png' (minúscula) según tus carpetas reales.
   const timelineData = [
-    { year: 2020, format: "JPG", comment: "Donde nuestra historia comenzó entre mensajes..." },
-    { year: 2021, format: "png", comment: "Las primeras videollamadas interminables." },
-    { year: 2022, format: "png", comment: "El año que entendimos que esto era para siempre." },
-    { year: 2023, format: "png", comment: "Contando los días para vernos otra vez." },
-    { year: 2024, format: "png", comment: "Planeando cada detalle de nuestro futuro." },
-    { year: 2025, format: "png", comment: "El último año de extrañarnos. La meta está cerca." }
+    { year: 2020, format: "JPG", comment: "Donde nuestra historia comenzó entre mensajes, llamadas y jueguitos." },
+    { year: 2021, format: "png", comment: "Rompimos las barreras de la distancia y me enamore de ti aun más." },
+    { year: 2022, format: "png", comment: "Primera vez de vae en Chile." },
+    { year: 2023, format: "png", comment: "Un años super bonito, te mudaste a Cordoba y me enseñaste Carlos Paz." },
+    { year: 2024, format: "png", comment: "LLEGO NENIWI! LLEGO NENIWI! y tambien tomamos melon con vino." },
+    { year: 2025, format: "png", comment: "El mejor verano de la vida, vimos a top, fuimos al sur y terminamos nuestras vacaciones en Argentina." }
   ];
 
   return (
