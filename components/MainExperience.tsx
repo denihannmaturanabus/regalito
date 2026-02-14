@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Heart, X, ZoomIn, Camera } from 'lucide-react';
 import Countdown from './Countdown';
 import Letter from './Letter';
+import TulipBouquet from './TulipBouquet';
 
 const MainExperience: React.FC = () => {
   // ESTADO PARA EL ZOOM DE IMAGEN
@@ -16,7 +17,7 @@ const MainExperience: React.FC = () => {
     { year: 2022, format: "png", comment: "Primera vez de vae en Chile." },
     { year: 2023, format: "png", comment: "Un años super bonito, te mudaste a Cordoba y me enseñaste Carlos Paz." },
     { year: 2024, format: "png", comment: "LLEGO NENIWI! LLEGO NENIWI! y tambien tomamos melon con vino." },
-    { year: 2025, format: "png", comment: "El mejor verano de la vida, vimos a top, fuimos al sur y terminamos nuestras vacaciones en Argentina." }
+    { year: 2025, format: "png", comment: "El mejor verano de la vida, vimos a top, fuimos al sur y terminamos nuestras vacaciones en Argentina. (tambien huvo visita sorpresa" }
   ];
 
   return (
@@ -55,7 +56,15 @@ const MainExperience: React.FC = () => {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="h-screen flex flex-col items-center justify-center p-6 text-center space-y-8 relative overflow-hidden">
+      <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        {/* Background Image with Blur */}
+        <img 
+          src="/img/hero.png" 
+          alt="Background" 
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0  bg-white/60" />
+
         {/* Lluvia de corazones de fondo */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(15)].map((_, i) => (
@@ -75,16 +84,16 @@ const MainExperience: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="z-10 relative"
+          className="z-10 relative p-6 text-center space-y-8"
         >
-          <div className="inline-block px-4 py-1 mb-6 border border-rose-200 rounded-full bg-white/50 backdrop-blur-sm">
-             <span className="text-rose-500 text-xs font-bold tracking-[0.2em] uppercase">Lo logramos, mi amor</span>
+          <div className="inline-block px-4 py-1 mb-6 border border-rose-200 rounded-full bg-white/80 backdrop-blur-sm shadow-sm">
+             <span className="text-rose-600 text-xs font-bold tracking-[0.2em] uppercase">D & V</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 bg-gradient-to-r from-rose-600 to-rose-400 bg-clip-text text-transparent">
-            ADIÓS DISTANCIA
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 bg-gradient-to-r from-rose-600 to-rose-500 bg-clip-text text-transparent drop-shadow-sm">
+            Feliz San Valentín
           </h1>
-          <p className="text-lg md:text-xl text-rose-800/70 font-medium max-w-xl mx-auto leading-relaxed">
-            Cinco años contados en pixeles, ahora listos para vivirlos en HD.
+          <p className="text-lg md:text-xl text-rose-900 font-semibold max-w-xl mx-auto leading-relaxed drop-shadow-sm">
+             con todo el amor del mundo, para la niña mas linda
           </p>
         </motion.div>
         
@@ -107,8 +116,8 @@ const MainExperience: React.FC = () => {
             <div className="text-center mb-20 space-y-2">
                 <h2 className="text-rose-400 font-bold tracking-[0.3em] text-xs uppercase mb-4">Para celebrar este San Valentin</h2>
                 <h2 className="text-rose-400 font-bold tracking-[0.3em] text-xs uppercase mb-4">Te hice una recopilacion de</h2>
-                <h3 className="text-4xl font-extrabold text-rose-900">Nuestra Historia</h3>
-                <p className="text-rose-400 font-medium">teamoteamoteamo</p>
+                <h3 className="text-4xl font-extrabold text-rose-900">Nuestro amor</h3>
+                <p className="text-rose-400 font-medium">con el paso de los años</p>
             </div>
 
             <div className="space-y-12">
@@ -119,24 +128,26 @@ const MainExperience: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ delay: index * 0.1 }}
-                        className="flex flex-col md:flex-row gap-8 bg-rose-50/50 p-6 md:p-8 rounded-3xl border border-rose-100 hover:shadow-xl transition-all duration-300 hover:bg-white"
+                        className="flex flex-col md:flex-row gap-8 bg-white p-6 md:p-8 rounded-[2rem] border-4 border-rose-200 shadow-xl shadow-rose-200/50 hover:shadow-2xl hover:shadow-rose-300/50 transition-all duration-500 hover:-translate-y-1 hover:border-rose-300"
                     >
                         {/* Columna Izquierda: Año y Comentario */}
-                        <div className="md:w-48 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-rose-200 pb-6 md:pb-0 md:pr-8 shrink-0">
-                            <span className="text-6xl font-black text-rose-300/80 tracking-tighter">{item.year}</span>
-                            <span className="text-xs font-bold text-rose-400 uppercase tracking-widest mt-1 mb-3">Capítulo {index + 1}</span>
+                        <div className="md:w-48 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r-2 border-rose-100 pb-6 md:pb-0 md:pr-8 shrink-0">
+                            <span className="text-6xl font-black text-rose-400 tracking-tighter drop-shadow-sm">{item.year}</span>
+                            <div className="px-3 py-1 bg-rose-100 rounded-full my-3">
+                                <span className="text-xs font-bold text-rose-600 uppercase tracking-widest">Capítulo {index + 1}</span>
+                            </div>
                             
-                            <p className="text-sm font-medium text-rose-700 italic text-center md:text-left leading-relaxed">
+                            <p className="text-sm font-semibold text-rose-800 italic text-center md:text-left leading-relaxed">
                               "{item.comment}"
                             </p>
                         </div>
 
                         {/* Columna Derecha: Grid de 6 fotos Interactivas */}
-                        <div className="flex-1 grid grid-cols-3 gap-3 h-auto">
+                        <div className="flex-1 grid grid-cols-3 gap-4 h-auto">
                             {[1, 2, 3, 4, 5, 6].map((photoNum) => (
                                 <div 
                                   key={photoNum} 
-                                  className="relative group overflow-hidden rounded-xl bg-rose-200 cursor-pointer aspect-square shadow-sm"
+                                  className="relative group overflow-hidden rounded-2xl bg-rose-100 cursor-pointer aspect-square shadow-sm border-2 border-transparent hover:border-rose-300 transition-all duration-300"
                                   onClick={() => setSelectedImage(`/img/${item.year}/${photoNum}.${item.format}`)}
                                 >
                                     <img 
@@ -185,14 +196,22 @@ const MainExperience: React.FC = () => {
       </section>
 
       {/* SECCIÓN FINAL: CUENTA REGRESIVA */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white to-rose-100 relative overflow-hidden">
+      <section className="pt-10 pb-32 px-6 bg-gradient-to-b from-white to-rose-100 relative overflow-hidden">
         {/* Decoración de fondo */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
             <div className="absolute top-10 left-10 w-64 h-64 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
             <div className="absolute top-10 right-10 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
             <div className="absolute -bottom-32 left-1/2 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
-
+        
+        {/* SECCIÓN DEL RAMO */}
+        <section className="py-12 bg-rose-50/50">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-rose-800">Un detalle para ti 🌷</h3>
+            </div>
+            <TulipBouquet />
+        </section>         
+        
         <div className="relative z-10">
             <Countdown />
 

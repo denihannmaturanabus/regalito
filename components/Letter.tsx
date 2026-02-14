@@ -3,21 +3,19 @@ import { motion, useInView } from 'framer-motion';
 import { RefreshCcw, HeartHandshake } from 'lucide-react';
 
 const Letter = () => {
-  // =====================================================================
-  // 👇👇👇 ZONA DE EDICIÓN: ESCRIBE TU CARTA AQUÍ DENTRO 👇👇👇
-  // Mantén las comillas invertidas ` ` al principio y al final.
-  // Usa "Enter" normal para saltar de línea.
-  // =====================================================================
-  const fullText = `Hola mi vida,
+  const fullText = `Hola mi niña,
 
-a
+Ansio el dia en que la distancia deje de atormentarnos, quiero compartir cada dia contigo por el resto de mi vida. Quiero despertar a tu lado, preparar el desayuno juntos y quedarnos haciendonos mimos. 
 
-a
+Ya cada vez queda menos para que todas nuestras ganas de estar juntitos se hagan realidad y aunque a veces la espera se sienta eterna, cada dia que pasa es un pasito mas cerca. Quiero que sepas que cada sacrificio y cada kilometro de distancia, todo vale la pena porque al final del camino estas tu con neniwi y eso es lo unico que importa, es lo que me motiva.
 
-a
-Te amo infinito.`;
-  // 👆👆👆 FIN DE LA CARTA
-  // =====================================================================
+Te amo con todo mi ser, me haces querer ser mejor persona y darte todo lo que mereces. Gracias por toda la paciencia y amor que me das, por esperar todos estos años y nunca perder la fe en nuestro amor.
+
+Aun recuerdo las noches que nos quedabamos hablando hasta tarde conociendonos, jugabamos y nos enamorabamos sin poder vernos ni tocarnos, estoy seguro que seguiremos amandonos cada dia cuando estemos juntitos y que haremos que cada dia sea bonito y especial como lo hemos hecho hasta ahora a pesar de la distancia. 
+
+Eres la luz de mi vida, mi mejor amiga y muy pronto mi esposa. No puedo esperar a hacer una familia contigo y neniwi. Feliz san valentin mi amor, siempre seras el mejor regalo que me dio la vida.
+
+Te amo 3mil millones, ya queda muy muy muy poquito. Eres mi galletita kinder.`;
 
   const [displayedText, setDisplayedText] = useState('');
   const ref = useRef(null);

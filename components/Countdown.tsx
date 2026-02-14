@@ -63,10 +63,10 @@ const Countdown = () => {
         </div>
 
         <h3 className="text-2xl md:text-4xl font-black text-rose-900 mb-2 mt-4">
-          La espera termina aquí
+          YA QUEDA POQUITITO
         </h3>
         <p className="text-rose-500 font-medium mb-12 flex items-center justify-center gap-2">
-          28 de Febrero, 2026 <Heart size={16} fill="currentColor" /> El comienzo definitivo
+          28 de Febrero, 2026 <Heart size={16} fill="currentColor" />
         </p>
 
         {/* Grid del Contador */}
