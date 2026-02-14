@@ -221,7 +221,7 @@ const MainExperience: React.FC = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <h2 className="text-3xl font-bold text-rose-900 mb-2">Te amo infinitamente</h2>
+                  <h2 className="text-3xl font-bold text-rose-900 mb-2">Te amo mil millones</h2>
                   <p className="text-sm text-rose-500 font-medium tracking-wide">
                     Hecho con todo mi ❤️ para ti.
                   </p>
