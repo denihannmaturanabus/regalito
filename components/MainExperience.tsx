@@ -138,7 +138,7 @@ const MainExperience: React.FC = () => {
                             </div>
                             
                             <p className="text-sm font-semibold text-rose-800 italic text-center md:text-left leading-relaxed">
-                              "{item.comment}"
+                              {item.comment}
                             </p>
                         </div>
 
@@ -176,7 +176,7 @@ const MainExperience: React.FC = () => {
                         <span className="text-6xl font-black text-rose-400/80 tracking-tighter">2026</span>
                         <span className="text-xs font-bold text-rose-500 uppercase tracking-widest mt-1 mb-3">El Futuro</span>
                         <p className="text-sm font-medium text-rose-800 italic text-center md:text-left leading-relaxed">
-                          "Aquí estaran nuestras proximas aventuras."
+                          Aquí estaran nuestras proximas aventuras.
                         </p>
                     </div>
 
